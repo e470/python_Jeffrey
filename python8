@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import csv
+
+X = []
+Y = []
+
+with open('/Users/i858842/Documents/GitHub/Intro-python-final/dataX.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            line_count+= 1
+            continue
+        X.append(row[0])
+
+with open('/Users/i858842/Documents/GitHub/Intro-python-final/dataY.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            line_count+= 1
+            continue
+        Y.append(row[0])
+
+plt.plot(X, Y)
+
+plt.show()

@@ -1,0 +1,56 @@
+import math
+import csv
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+
+def divide(x, y):
+    return x / y
+
+#A = input("input 1: ")
+#B = input("input 2:")
+
+#math_op = input("math type: ")
+line_count = 0 
+with open('/Users/i858842/summerPython/Data1.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        if line_count == 0:
+            line_count += 1
+            continue
+
+        A = row[0]
+        B = row[1]
+        math_op = row[2]
+        print(B.strip())  
+        print(A.strip())
+        
+        print(math_op)   
+        if ('add' in math_op):
+            print(add(float(A.strip()), float(B.strip())))
+        elif ('sub' in math_op):
+            print(subtract(float(A), float(B)))
+        elif ('muliply' in math_op):
+            print(multiply(float(A), float(B)))
+        elif ('div' in math_op):
+            print(divide(float(A), float(B)))
+        elif ('exp' in math_op):
+            print(math.pow(float(A), float(B)))
+        elif ('log' in math_op):    
+            print(math.log(float(A), float(B)))
+        elif('sin' in math_op):
+            print(math.sin(float(A)))
+        elif('cos' in math_op):
+            print(math.cos(float(A)))    
+        else :
+            print("invalid math op")  
+
+ 
+  
