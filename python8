@@ -39,10 +39,7 @@ print("after append Y : "+ str(len(X)))
 fig = plt.figure() 
   
 ax = fig.add_subplot(111) 
-"""
-rect1 = matplotlib.patches.Rectangle((0, 0),   3, 1, color ='green')  
-ax.add_patch(rect1)
-"""
+
 
 area = 0
 for i in range(1,250):
