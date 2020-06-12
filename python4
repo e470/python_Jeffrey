@@ -1,0 +1,6 @@
+A = []
+counter = 0
+while(counter < 10):
+    A.append(counter)
+    counter = counter + 1
+print(A)
